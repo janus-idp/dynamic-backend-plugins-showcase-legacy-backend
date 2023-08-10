@@ -12,7 +12,7 @@ However, it is also possible to test it with the legacy backend system, bu using
 
 ### Prerequisites
 
-- You should at the root of your backstage reporitory.
+- You should work at the root of your backstage reporitory.
 
 - The content of the [`dynamic-backend-plugins-showcase`](https://github.com/janus-idp/dynamic-backend-plugins-showcase) GitHub repository should be copied into a `dynamic-backend-plugins-showcase` folder at the root of your backstage repository, by running the following command in the root of your backstage repository:
 
