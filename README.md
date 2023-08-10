@@ -29,10 +29,10 @@ However, it is also possible to test it with the legacy backend system, bu using
 
   _NOTE: The `app-for-dynamic` package contains no change related to dynamic backend plugin support. It is provided only for the purpose of containing the same minimal list of plugins as the dynamic-plugin-enaled backend applications, in order to make testing easier_
 
-- Copy the content of this [`dynamic-backend-plugins-showcase-legacy-backend`](https://github.com/janus-idp/dynamic-backend-plugins-showcase-legacy-backend) GitHub repository into the `packages` folder at the root of your backstage repository, typically by running the following command in the root of your backstage repository:
+- Copy the content of this [`dynamic-backend-plugins-showcase-legacy-backend`](https://github.com/janus-idp/dynamic-backend-plugins-showcase-legacy-backend) repository into the `packages` folder at the root of your backstage repository, typically by running the following command in the root of your backstage repository:
 
   ```bash
-  curl  https://github.com/janus-idp/dynamic-backend-plugins-showcase-legacy-backend/archive/main.tar.gz | tar -xz -C packages --strip-components=1
+  curl -s -L https://github.com/janus-idp/dynamic-backend-plugins-showcase-legacy-backend/archive/main.tar.gz | tar -xz -C packages --strip-components=1
   ```
 
 - Install the dependencies of the dynamic plugin enabled backstage application packages:
