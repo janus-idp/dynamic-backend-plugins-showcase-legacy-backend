@@ -18,11 +18,11 @@ import { ScaffolderEntitiesProcessor } from '@backstage/plugin-scaffolder-backen
 import { Router } from 'express';
 import {
   LegacyBackendPluginInstaller,
-  PluginEnvironment,
+  LegacyPluginEnvironment,
 } from '@backstage/backend-plugin-manager';
 
 export default async function createPlugin(
-  env: PluginEnvironment,
+  env: LegacyPluginEnvironment,
 ): Promise<Router> {
   const builder = await CatalogBuilder.create(env);
   builder.addProcessor(new ScaffolderEntitiesProcessor());

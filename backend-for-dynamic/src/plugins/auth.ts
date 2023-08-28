@@ -19,10 +19,10 @@ import {
   defaultAuthProviderFactories,
 } from '@backstage/plugin-auth-backend';
 import { Router } from 'express';
-import { PluginEnvironment } from '../types';
+import { LegacyPluginEnvironment } from '@backstage/backend-plugin-manager';
 
 export default async function createPlugin(
-  env: PluginEnvironment,
+  env: LegacyPluginEnvironment,
 ): Promise<Router> {
   return await createRouter({
     logger: env.logger,

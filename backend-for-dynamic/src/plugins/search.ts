@@ -22,13 +22,13 @@ import {
 import { Router } from 'express';
 import {
   LegacyBackendPluginInstaller,
-  PluginEnvironment,
+  LegacyPluginEnvironment,
 } from '@backstage/backend-plugin-manager';
 import { DefaultCatalogCollatorFactory } from '@backstage/plugin-search-backend-module-catalog';
 import { DefaultTechDocsCollatorFactory } from '@backstage/plugin-search-backend-module-techdocs';
 
 export default async function createPlugin(
-  env: PluginEnvironment,
+  env: LegacyPluginEnvironment,
 ): Promise<Router> {
   // Initialize a connection to a search engine.
   const searchEngine = new LunrSearchEngine({

@@ -16,7 +16,7 @@
 
 import {
   LegacyBackendPluginInstaller,
-  PluginEnvironment,
+  LegacyPluginEnvironment,
 } from '@backstage/backend-plugin-manager';
 import {
   EventsBackend,
@@ -26,7 +26,7 @@ import { HttpPostIngressOptions } from '@backstage/plugin-events-node';
 import { Router } from 'express';
 
 export default async function createPlugin(
-  env: PluginEnvironment,
+  env: LegacyPluginEnvironment,
 ): Promise<Router> {
   const eventsRouter = Router();
 

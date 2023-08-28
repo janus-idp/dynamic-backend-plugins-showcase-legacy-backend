@@ -43,7 +43,7 @@ import { DefaultIdentityClient } from '@backstage/plugin-auth-node';
 import {
   PluginManager,
   BackendPluginProvider,
-  PluginEnvironment,
+  LegacyPluginEnvironment,
 } from '@backstage/backend-plugin-manager';
 import { DefaultEventBroker } from '@backstage/plugin-events-backend';
 
@@ -67,7 +67,7 @@ function makeCreateEnv(config: Config, pluginProvider: BackendPluginProvider) {
 
   root.info(`Created UrlReader ${reader}`);
 
-  return (plugin: string): PluginEnvironment => {
+  return (plugin: string): LegacyPluginEnvironment => {
     const logger = root.child({ type: 'plugin', plugin });
     const database = databaseManager.forPlugin(plugin);
     const cache = cacheManager.forPlugin(plugin);

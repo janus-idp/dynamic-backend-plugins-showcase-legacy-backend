@@ -27,7 +27,7 @@ import {
 import { Router } from 'express';
 import {
   LegacyBackendPluginInstaller,
-  PluginEnvironment,
+  LegacyPluginEnvironment,
 } from '@backstage/backend-plugin-manager';
 
 export class AllowAllPermissionPolicy implements PermissionPolicy {
@@ -42,7 +42,7 @@ export class AllowAllPermissionPolicy implements PermissionPolicy {
 }
 
 export default async function createPlugin(
-  env: PluginEnvironment,
+  env: LegacyPluginEnvironment,
 ): Promise<Router> {
   const legacyInstallersWithPolicy = env.pluginProvider
     .backendPlugins()

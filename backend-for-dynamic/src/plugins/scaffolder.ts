@@ -22,11 +22,11 @@ import { ScmIntegrations } from '@backstage/integration';
 import { Router } from 'express';
 import {
   LegacyBackendPluginInstaller,
-  PluginEnvironment,
+  LegacyPluginEnvironment
 } from '@backstage/backend-plugin-manager';
 
 export default async function createPlugin(
-  env: PluginEnvironment,
+  env: LegacyPluginEnvironment,
 ): Promise<Router> {
   const catalogClient = new CatalogClient({
     discoveryApi: env.discovery,
